@@ -8,4 +8,11 @@ describe "StaticPages" do
       expect(page).to have_field('yellowbrickroad')
     end
   end
+
+  describe "About" do
+    it "incluces Oz" do
+      visit '/static_pages/about'
+      expect(page).to have_content('Oz')
+    end
+  end
 end
